@@ -10,9 +10,8 @@
 > 4.html和js分离，不需要使用字符串拼接（不容易写错）；
 
 #### 二.如何使用Handlebars
+> 1.下载Handlebars
 
-1. 下载Handlebars
-  
     1). [官网下载](http://handlebarsjs.com./installation.html)
 
     2). [GIT官网](https://github.com/daaain/Handlebars.git)
