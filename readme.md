@@ -11,4 +11,9 @@
 
 #### 二.如何使用Handlebars
 1. 下载Handlebars
-  2. [官网下载](http://handlebarsjs.com./installation.html)
+  1). [官网下载](http://handlebarsjs.com./installation.html)
+  2). [GIT官网](https://github.com/daaain/Handlebars.git)
+  3). [jQuery-CDN](http://note.youdao.com/)
+  4). [Handlebars-CDN](http://note.youdao.com/)
+  5).通过npm下载: npm install --save handlebars
+  6).通过bower下载: bower install --save handlebars
