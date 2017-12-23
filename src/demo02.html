@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.min.js"></script>
+</head>
+<body>
+    <script type="text/template" id="myTemplate">
+        <div>
+            <h1>{{title}}</h1>
+            <p>{{content}}</p>
+            <ul>
+                {{#each list}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </script>
+
+    <section id="box">
+
+    </section>
+
+    <script>
+        $(function(){
+            var data = {
+                title:'handlebars模板引擎',
+                content:'这是使用模板引擎的具体步骤，以下分为四个步骤：',
+                list:[
+                    '用jQuery获取模版的html框架',
+                    '注册一个Handlebars处理预编译模板',
+                    '将json对象用刚刚注册的Handlebars模版封装',
+                    '得到最终的html，把模板和内容插入到页面中',
+                    '注：最后如果还不理解，你可以试着在每个步骤下面使用console一下看看'
+
+                ]
+            };
+            //1.用jQuery获取模板内容
+            var template = $("#myTemplate").html();
+            //2.预编译模板
+            var func = Handlebars.compile(template);
+            //3.匹配json内容替换模板内变量
+            var str = func(data);
+            //4.输入模板
+            $('#box').html(str);
+        });
+    </script>
+</body>
+</html>
