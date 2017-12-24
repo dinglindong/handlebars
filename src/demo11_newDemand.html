@@ -95,12 +95,12 @@
 			return options.fn(this);
 		}
 	});
-    Handlebars.registerHelper('isblue',function(value,options){
-	    //块级helper使用options.fn
-	    if(value &&value.length>2){
-		    return options.fn(this);
-	    }
-    });
+        Handlebars.registerHelper('isblue',function(value,options){
+	        //块级helper使用options.fn
+	        if(value &&value.length>2){
+		        return options.fn(this);
+	        }
+        });
 	var template = $('#card-tempalte').html();
 	var func = Handlebars.compile(template);
 	var str = func(data);
