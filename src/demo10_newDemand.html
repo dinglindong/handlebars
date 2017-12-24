@@ -88,12 +88,12 @@
 		//value就是addone后面跟这个的@index,会作为一个参数传递进来
 		return value + 1;
 	});
-    Handlebars.registerHelper('isfirst',function(value,options){
-	    //块级helper使用options.fn
+        Handlebars.registerHelper('isfirst',function(value,options){
+	        //块级helper使用options.fn
 		if(value == 0){
 			return options.fn(this);
-		}
-    });
+		}  
+        });
 	var template = $('#card-tempalte').html();
 	var func = Handlebars.compile(template);
 	var str = func(data);
