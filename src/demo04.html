@@ -46,14 +46,14 @@
 	        job:'电脑工程师'
 		}
 	];
-	//    [1.拼接字符串方法]
-	//    var str = '';
-	//    str +=	'<div>姓名：'+data.name+'</div>' +
+	//    	[1.拼接字符串方法]
+	//    	var str = '';
+	//    	str +=	'<div>姓名：'+data.name+'</div>' +
 	//	    '<div>出生日期：'+data.birth+'</div>' +
 	//	    '<div>出生地：'+data.home+'</div>' +
 	//	    '<div>职业：'+data.job+'</div>';
 
-	//[2.使用模板引擎]
+	//	[2.使用模板引擎]
 	var template = $('#card-tempalte').html();
 	var func = Handlebars.compile(template);
 	var str = func(data);
