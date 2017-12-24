@@ -81,10 +81,10 @@
 		var arr = ['一','二','三'];
 		return arr[value];
 	});
-    Handlebars.registerHelper('addone',function(value){
-	    //value就是addone后面跟这个的@index,会作为一个参数传递进来
-	    return value + 1;
-    });
+        Handlebars.registerHelper('addone',function(value){
+	       //value就是addone后面跟这个的@index,会作为一个参数传递进来
+	       return value + 1;
+        });
 	var template = $('#card-tempalte').html();
 	var func = Handlebars.compile(template);
 	var str = func(data);
