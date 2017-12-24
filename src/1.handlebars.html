@@ -38,13 +38,13 @@
                 ]
             };
             //1.用jQuery获取模板内容
-            var template = $("#myTemplate").html();
+                var template = $("#myTemplate").html();
             //2.预编译模板
-            var func = Handlebars.compile(template);
+                var func = Handlebars.compile(template);
             //3.匹配json内容替换模板内变量
-            var str = func(data);
+                var str = func(data);
             //4.输入模板
-            $('#box').html(str);
+                $('#box').html(str);
         });
     </script>
 </body>
