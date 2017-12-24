@@ -1,38 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.min.js"></script>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.min.js"></script>
+	<style>
+		.card{
+			font-size:30px;
+			float:left;
+			margin:20px;
+			background-color:pink;
+		}
+	</style>
 </head>
 <body>
-<script type="text/template" id="myTemplate">
-    <div>
-        <h1>{{title}}</h1>
-        <p>{{content}}</p>
-    </div>
-</script>
-
-<section id="box">
-
-</section>
-
-<script>
-    $(function(){
-        var data = {
-            title:'handlebars模板引擎',
-            content:'首先我们来简单的使用一下模板引擎'
-        };
-        //1.用jQuery获取模板内容
-        var template = $("#myTemplate").html();
-        //2.预编译模板
-        var func = Handlebars.compile(template);
-        //3.匹配json内容替换模板内变量
-        var str = func(data);
-        //4.输入模板
-        $('#box').html(str);
-    });
-</script>
+	<!--这是一个正常显示的页面-->
+	<div class="card" id="card">
+		<div>姓名：凯文米特尼克</div>
+		<div>出生日期：1963年8月6日</div>
+		<div>出生地：美国洛杉矶</div>
+		<div>职业：网络安全咨询师</div>
+	</div>
 </body>
 </html>

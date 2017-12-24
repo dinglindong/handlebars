@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.min.js"></script>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.min.js"></script>
+	<style>
+		.card{
+			font-size:30px;
+			float:left;
+			margin:20px;
+			background-color:pink;
+		}
+	</style>
 </head>
 <body>
-<script type="text/template" id="myTemplate">
-    <div>
-        <h1>{{title}}</h1>
-        <p>{{content}}</p>
-        <ul>
-            {{#each list}}
-            <li>{{this}}</li>
-            {{/each}}
-        </ul>
-    </div>
+<script type="text/x-handlebars-template" id="card-tempalte">
+	<div>姓名：{{name}}</div>
+	<div>出生日期：{{birth}}</div>
+	<div>出生地：{{home}}</div>
+	<div>职业：{{job}}</div>
 </script>
 
-<section id="box">
+<!--这是一个使用handlebars编写的页面-->
+<div class="card" id="card">
 
-</section>
+</div>
 
 <script>
-    $(function(){
-        var data = {
-            title:'handlebars模板引擎',
-            content:'这是使用模板引擎的具体步骤，以下分为四个步骤：',
-            list:[
-                '用jQuery获取模板内容',
-                'handlebars处理预编译模板',
-                '匹配json内容替换模板内变量',
-                '输出匹配好的模板和内容'
-            ]
-        };
-        //1.用jQuery获取模板内容
-        var template = $("#myTemplate").html();
-        //2.预编译模板
-        var func = Handlebars.compile(template);
-        //3.匹配json内容替换模板内变量
-        var str = func(data);
-        //4.输入模板
-        $('#box').html(str);
-    });
+	var data = {
+		name:'凯文米特尼克',
+		birth:'1963年8月6日',
+		home:'美国洛杉矶',
+		job:'网络安全咨询师'
+	};
+//    [1.拼接字符串方法]
+//    var str = '';
+//    str +=	'<div>姓名：'+data.name+'</div>' +
+//	    '<div>出生日期：'+data.birth+'</div>' +
+//	    '<div>出生地：'+data.home+'</div>' +
+//	    '<div>职业：'+data.job+'</div>';
+
+//[2.使用模板引擎]
+	var template = $('#card-tempalte').html();
+//	console.log(template);
+	var func = Handlebars.compile(template);
+//	console.log(func);
+	var str = func(data);
+//	console.log(str);
+	$('#card').html(str);
 </script>
 </body>
 </html>
