@@ -41,13 +41,13 @@ id是在后面进行编译的时候所使用,让其编译的代码找到该模�
 
 ```
 1.用jQuery获取模板
-var template = $("#myTemplate").html();
+    var template = $("#myTemplate").html();
 2.预编译模板
-var func = Handlebars.compile(template);
+    var func = Handlebars.compile(template);
 3.匹配json内容
-var str = func(data);
+    var str = func(data);
 4.输入模板
-$('#box').html(str);
+    $('#box').html(str);
 ```
 以上述代码为例进行解释:
 
